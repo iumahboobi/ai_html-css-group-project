@@ -156,3 +156,128 @@
     background-color: transparent;
     border: 2px solid var(--color-white);
 }
+
+
+/* ===== HOME PAGE RESPONSIVE MEDIA QUERIES ===== */
+
+/* ---------- Tablet (max 992px) ---------- */
+@media (max-width: 992px) {
+
+    /* Hero section: reduce font sizes slightly */
+    .hero {
+        padding: 64px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    /* Info cards: max-width narrower per card so 2 fit side-by-side nicely */
+    .info-card {
+        max-width: 200px;
+    }
+
+    /* Quote section: reduce size from 36px → 30px */
+    .quote {
+        padding: 80px 0;
+    }
+
+    .quote-text {
+        font-size: 30px;
+    }
+
+    /* CTA banner reduce padding */
+    .cta {
+        padding: 64px 0;
+    }
+
+    .cta-banner {
+        padding: 32px 48px;
+    }
+}
+
+/* ---------- Mobile landscape (max 768px) — burger menu kicks in here ---------- */
+@media (max-width: 768px) {
+
+    /* Hero: even smaller headings, reduce padding */
+    .hero {
+        padding: 48px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    /* Info heading 36 → 28px */
+    .info-heading {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .info-card {
+        max-width: 240px;   /* 2 cards per row on mobile */
+        flex: 1 1 44%;
+    }
+
+    /* Quote further reduction */
+    .quote {
+        padding: 64px 0;
+    }
+
+    .quote-text {
+        font-size: 24px;
+    }
+
+    .quote-author {
+        font-size: 18px;
+    }
+
+    /* CTA banner: stacked (wrap already does this) */
+    .cta-banner {
+        padding: 28px 32px;
+    }
+
+    .cta-text h3 {
+        font-size: 20px;
+    }
+}
+
+/* ---------- Small Mobile (max 576px) — 1 card per column, smallest text ---------- */
+@media (max-width: 576px) {
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .info-heading {
+        font-size: 24px;
+    }
+
+    /* 1 column cards only */
+    .info-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .info-card-box {
+        max-width: 260px;     /* stop square from being huge on small phones */
+        margin: 0 auto;
+    }
+
+    .quote-text {
+        font-size: 20px;
+    }
+
+    .cta-banner {
+        padding: 24px;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* test on Iphone 12 /ipad/Desktop sizes*/
