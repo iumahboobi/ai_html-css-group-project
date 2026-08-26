@@ -1,0 +1,149 @@
+.logo img {
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    margin-left: 5%;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    background-color: var(--color-dark);
+}
+
+.hero article {
+    max-width: 45%;
+}
+
+.hero h1{
+    font-size: 48px;
+    line-height: 1.2;
+    color: var(--color-white);
+    font-style: bold;
+    position: relative;
+    margin-left: 10%;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--color-light-gray);
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.animated-gif {
+    margin-right: 10%;
+}
+
+.animated-gif img {
+    height: clamp(60px, 20vw, 1200px);
+    width: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.card {
+    flex: 0 0 32%;
+    padding: 3%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border: 2px solid;
+    border-radius: 13px;
+    border-color: var(--color-blue);
+    transition: transform 0.5s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card p {
+    text-align: center;
+    margin-top: 6%;
+    font-size: clamp(14px, 2vw, 20px);
+    
+}
+
+.titles {
+    text-align: center;
+    margin-top: 6%;
+    font-size: clamp(14px, 2vw, 20px);
+    font-style: italic;
+}
+
+.card p + p {
+    margin-top: 1%;
+}
+
+.quote-container {
+    background-color: #E5E7EB;
+    padding: 3% 0;
+}
+
+.quote-container p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-dark);
+}
+
+#author {
+    text-align: end;
+    font-size: medium;
+}
+
+.action-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--color-blue);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70vw;
+    padding: 24px 40px;
+    color: var(--color-white);
+    border-radius: 5px;
+}
+
+.action-box h3 {
+    margin-bottom: 4px;
+}
+
+.action-box p {
+    font-size: 13px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark);
+}
+
+.footer p {
+    flex: 1;
+    color: var(--color-white);
+    font-size: small;
+    text-align: center;
+}
