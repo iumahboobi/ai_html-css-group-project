@@ -142,7 +142,7 @@ img {
     text-align: center;
 }
 
-/* ===== MEDIA QUERIES (Phase 2, point 11) ===== */
+/* ===== MEDIA QUERIES */
 
 /* Mobile: less than 768px — show burger, show vertical menu when checked */
 @media (max-width: 767px) {
@@ -187,7 +187,7 @@ img {
     }
 
     /* CSS-only magic: when checkbox is checked, show the nav menu */
-    .nav-toggle-checkbox:checked ~ ul {
+    .nav-toggle-checkbox:checked~ul {
         display: flex;
     }
 }
