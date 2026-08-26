@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+:root {
+    --color-dark: #1F2937;
+    --color-blue: #3882F6;
+    --color-light-gray: #E5E7EB;
+    --color-white: #F9FAF8;
+    --color-page-bg: #FFFFFF;
+    --color-blue-hover: #2563EB;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,4 +19,190 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-family: inherit;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-blue-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    border-radius: 4px;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-white);
+    color: var(--color-blue);
+}
+
+img {
+
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.site-header {
+    background-color: var(--color-dark);
+    padding: 20px 0;
+}
+
+.site-header .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-nav a {
+    color: var(--color-light-gray);
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-white);
+}
+
+.main-nav a.active {
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav-toggle-checkbox {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 24px;
+    color: var(--color-white);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-toggle-label:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.site-footer {
+    background-color: var(--color-dark);
+    color: var(--color-light-gray);
+    padding: 32px 0;
+    text-align: center;
+}
+
+/* ===== MEDIA QUERIES (Phase 2, point 11) ===== */
+
+/* Mobile: less than 768px — show burger, show vertical menu when checked */
+@media (max-width: 767px) {
+    .nav-toggle-label {
+        display: inline-block;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .main-nav ul {
+        display: none;
+        position: absolute;
+        top: calc(100% + 20px);
+        right: 0;
+        background-color: var(--color-dark);
+        flex-direction: column;
+        gap: 0;
+        min-width: 220px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 12px 16px;
+        width: 100%;
+        text-align: left;
+        border-radius: 6px;
+    }
+
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* CSS-only magic: when checkbox is checked, show the nav menu */
+    .nav-toggle-checkbox:checked ~ ul {
+        display: flex;
+    }
+}
+
+/* Small mobile: tighter padding on container */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .site-header {
+        padding: 16px 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
 }
