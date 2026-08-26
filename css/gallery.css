@@ -90,7 +90,7 @@ h2 {
 
 .quote-container {
     background-color: #E5E7EB;
-    padding: 3% 0;
+    padding: 3% 5%;
 }
 
 .quote-container p {
@@ -100,7 +100,7 @@ h2 {
 }
 
 .quote {
-    font-size: 36px;
+    font-size: clamp(20px, 5vw, 36px);
     font-weight: 300;
     font-style: italic;
     color: var(--color-dark);
@@ -108,7 +108,7 @@ h2 {
 
 #author {
     text-align: end;
-    font-size: medium;
+    font-size: clamp(14px, 3vw, 16px);
 }
 
 .action-box {
@@ -140,6 +140,7 @@ h2 {
     overflow: hidden;
     min-height: 60px;
     background-color: var(--color-dark);
+    margin-top: 5%;
 }
 
 .footer-brush {
@@ -170,5 +171,32 @@ h2 {
     to {
         left: 100%;
         transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 5% 0;
+    }
+
+    .hero article {
+        max-width: 90%;
+    }
+
+    .hero h1,
+    .hero-subtitle {
+        margin-left: 0;
+    }
+
+    .animated-gif {
+        margin-right: 0;
+    }
+
+    .action-box {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 90%;
     }
 }
