@@ -1,39 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-#header-logo {
-    height: clamp(30px, 10vw, 60px);
+.logo img {
+    height: 70px;
     width: auto;
-}
-
-.navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #1F2937;
-color: #E5E7EB;
-font-size: 18px;
-position: relative;
-}
-
-.nav-links {
-    display: flex;
-    gap: 24px;
-    margin-right: 10%;
-}
-
-.navbar a {
-    color: #E5E7EB;
-    text-decoration: none;
-    font-family: 'Roboto';
-}
-
-.navbar img {
-    margin-left: 10%;
-}
-
-.nav-toggle,
-.nav-toggle-label {
-    display: none;
+    padding: 10px;
+    margin-left: 5%;
 }
 
 .hero {
@@ -41,7 +10,7 @@ position: relative;
     justify-content: space-between;
     align-items: center;
     gap: 5%;
-    background-color: #1F2937;
+    background-color: var(--color-dark);
 }
 
 .hero article {
@@ -50,19 +19,18 @@ position: relative;
 
 .hero h1{
     font-size: 48px;
-    color: #F9FAF8;
-    font-family: 'Roboto';
-    font-weight: 700; /* Extra Bold*/
-    justify-content: space-between;
+    line-height: 1.2;
+    color: var(--color-white);
+    font-style: bold;
     position: relative;
     margin-left: 10%;
 }
 
 .hero-subtitle {
     font-size: 18px;
-    color: #E5E7EB;
-    font-family: 'Roboto';
+    color: var(--color-light-gray);
     margin-left: 10%;
+    margin-bottom: 10%;
 }
 
 .animated-gif {
@@ -74,63 +42,108 @@ position: relative;
     width: auto;
 }
 
-.sign-up-button {
-
+h2 {
+    text-align: center;
+    font-size: 36px;
 }
 
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Roboto';
     justify-content: space-between;
-    gap: 5%;
+
 }
 
 .card {
-    flex: 0 0 28%;
+    flex: 0 0 32%;
+    padding: 3%;
 }
 
 .card img {
     width: 100%;
     height: auto;
+    border: 2px solid;
+    border-radius: 13px;
+    border-color: var(--color-blue);
+    transition: transform 0.5s ease;
 }
 
+.card img:hover {
+    transform: scale(1.1);
+}
 
+.card p {
+    text-align: center;
+    margin-top: 6%;
+    font-size: clamp(14px, 2vw, 20px);
+    
+}
 
-/* - - - - - - - - TABLET & MOBILE BURGER - - - - - - - - */
+.titles {
+    text-align: center;
+    margin-top: 6%;
+    font-size: clamp(14px, 2vw, 20px);
+    font-style: italic;
+}
 
-@media (max-width: 768px) {
-    .nav-toggle-label {
-        display: block;
-        margin-right: 10%;
-        font-size: 28px;
-        color: #E5E7EB;
-        cursor: pointer;
-    }
+.card p + p {
+    margin-top: 1%;
+}
 
-    .nav-toggle {
-        position: absolute;
-        opacity: 0;
-        pointer-events: none;
-    }
+.quote-container {
+    background-color: #E5E7EB;
+    padding: 3% 0;
+}
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #1F2937;
-        text-align: center;
-    }
+.quote-container p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .nav-links a {
-        padding: 12px 10%;
-    }
+.quote {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-dark);
+}
 
-    .nav-toggle:checked ~ .nav-links {
-        display: flex;
-    }
+#author {
+    text-align: end;
+    font-size: medium;
+}
+
+.action-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--color-blue);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70vw;
+    padding: 24px 40px;
+    color: var(--color-white);
+    border-radius: 5px;
+}
+
+.action-box h3 {
+    margin-bottom: 4px;
+}
+
+.action-box p {
+    font-size: 13px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark);
+}
+
+.footer p {
+    flex: 1;
+    color: var(--color-white);
+    font-size: small;
+    text-align: center;
 }
