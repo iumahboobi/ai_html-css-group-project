@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
     <title>About | Group Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/about.css">
 </head>
+
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo"></a>
-            <nav class="main-nav"
-                 aria-label="Main navigation">
-                 <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-                 <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-                        <i class="fa-solid fa-bars"></i>
-                      </label>
+            <a href="index.html" class="logo">Header Logo</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -33,21 +32,93 @@
     </header>
 
     <main>
-        <section class="page-hero">
+        <section class="about-hero">
             <div class="container">
-                <h1></h1>
-                <div>
-                    <img src="img/about.jpg" alt="About">
+                <div class="about-hero-wrapper">
+                    <div class="about-hero-text">
+                        <p class="eyebrow">About the Artist</p>
+                        <h1>David Van Gogh</h1>
+                        <p class="lead">Carrying forward a 140-year family legacy — painting light,
+                            color, and quiet emotion into every canvas, one brushstroke at a time.</p>
+                        <div class="about-hero-stats">
+                            <div class="stat"><strong>28+</strong><span>Years painting professionally</span></div>
+                            <div class="stat"><strong>340</strong><span>Original works sold worldwide</span></div>
+                            <div class="stat"><strong>17</strong><span>Solo gallery exhibitions</span></div>
+                        </div>
+                    </div>
+                    <figure class="about-hero-portrait">
+                        <img src="https://picsum.photos/seed/davidvanggogh-portrait/600/760"
+                            alt="Formal portrait of painter David Van Gogh standing in front of one of his large impasto abstract oil paintings in his Amsterdam studio"
+                            width="540" height="680">
+                    </figure>
                 </div>
-                <p></p>
+            </div>
+        </section>
+
+        <!-- ======= BIOGRAPHY / STORY SECTION (white bg, 2-col Flex text + image) ======= -->
+        <section class="about-bio">
+            <div class="container">
+                <div class="about-bio-wrapper">
+
+                    <figure class="about-bio-image">
+                        <img src="https://picsum.photos/seed/dvg-process/700/560"
+                            alt="Overhead shot of David's oil painting process — tubes of cadmium yellow and ultramarine blue, palette knives, brushes, and a half-finished landscape on linen"
+                            width="600" height="480">
+                    </figure>
+
+                    <div class="about-bio-text">
+                        <h2>The Story Behind Every Canvas</h2>
+                        <p>
+                            Born in Amsterdam in 1979, David Van Gogh grew up surrounded by the
+                            paintings of his great-great-uncle, Vincent. His earliest memories are of
+                            standing on a wooden crate in his grandfather's studio, holding a brush too
+                            big for his hands, mesmerized by the way linseed oil carried pigment across
+                            raw linen.
+                        </p>
+                        <p>
+                            After 8 years of classical training at the Royal Academy of Art, The Hague,
+                            David spent a decade living and painting in Provence — retracing the exact
+                            landscapes, wheat fields, and starry nights that inspired Vincent over a
+                            century before. What emerged was a style uniquely his: post-impressionist
+                            rigor, but looser, warmer, more intimate — painted alla prima in a single
+                            wet-on-wet sitting, letting the colors blend on the canvas instead of the
+                            palette.
+                        </p>
+                        <p>
+                            Today, David works out of a brick canal-side studio in central Amsterdam.
+                            Every canvas is painted in oil on Belgian linen, varnished with archival
+                            dammar, and accompanied by a signed, wax-sealed certificate of
+                            authenticity — just as every Van Gogh work has been for four generations.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= FINAL CTA BANNER (same blue pattern as home page CTA — reusable!) ======= -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-banner">
+                    <div class="cta-text">
+                        <h3>Visit the Amsterdam Studio</h3>
+                        <p>Book a private 60-minute viewing — meet David, see works in progress, and discuss
+                            commissioning a piece made for your space.</p>
+                    </div>
+                    <div class="cta-button">
+                        <a class="btn btn-outline" href="contact.html">Request your studio visit</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p></p>
+            <p>&copy; 2026 David Van Gogh Fine Art. All original artworks &amp; content protected under international
+                copyright law.</p>
         </div>
     </footer>
 </body>
+
 </html>
