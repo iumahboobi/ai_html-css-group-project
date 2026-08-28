@@ -1,3 +1,7 @@
+/* - - - - HERO DECORATION (painter illustration overlapping the header) - - - - */
+
+/* Negative margin-top pulls the illustration up over the dark header band;
+   pointer-events:none stops it from blocking clicks on the nav links behind it */
 .pintor {
     height: 40vw;
     width: auto;
@@ -5,6 +9,7 @@
     pointer-events: none;
 }
 
+/* - - - - INTRO / OUTRO TEXT BANDS (gray, interspersed with the services list) - - - - */
 .services-intro {
     background-color: var(--color-light-gray);
     padding: 3% 5%;
@@ -20,6 +25,9 @@
     font-style: italic;
 }
 
+/* - - - - SERVICES LIST (zig-zag image + text rows) - - - - */
+
+/* FLEX PARENT: stacks the 3 service rows vertically */
 .services-list {
     display: flex;
     flex-direction: column;
@@ -27,28 +35,34 @@
     padding: 5%;
 }
 
+/* FLEX CHILD: one service row = image + text side by side */
 .service {
     display: flex;
     align-items: center;
     gap: 5%;
 }
 
+/* Modifier: flips image/text order so rows alternate left/right (zig-zag) */
 .service-reverse {
     flex-direction: row-reverse;
 }
 
+/* Default image column — 40% width, fits a portrait-ish image */
 .service img {
     max-width: 40%;
     height: auto;
     border-radius: 13px;
 }
 
+/* Modifier: wider column + fixed 16:9 crop for a landscape image */
 .service-horizontal img {
     max-width: 55%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
+/* Modifier: switches the row to a column — full-width panoramic image
+   on top, text centered below it, instead of squeezing it into a side column */
 .service-panoramic {
     flex-direction: column;
     align-items: stretch;
@@ -62,6 +76,7 @@
     object-fit: cover;
 }
 
+/* Text column: grows to fill whatever space the image doesn't use */
 .service-text {
     flex: 1;
 }
@@ -77,6 +92,7 @@
     color: var(--color-dark);
 }
 
+/* - - - - CALL TO ACTION BANNER (blue box before footer) - - - - */
 .action-box {
     display: flex;
     justify-content: space-between;
@@ -99,19 +115,25 @@
     font-size: 13px;
 }
 
-/* - - - - - - RESPONSIVE BASICS - - - - - - */
+/* - - - - RESPONSIVE — Mobile (max 767px, same breakpoint as the
+   header burger menu in main.css) - - - - */
 @media (max-width: 767px) {
+
+    /* Service rows: image + text stack instead of sitting side by side
+       (both the default and the reversed/zig-zag variant) */
     .service,
     .service-reverse {
         flex-direction: column;
         text-align: center;
     }
 
+    /* Service images (default + horizontal variant) shrink to near full width */
     .service img,
     .service-horizontal img {
         max-width: 90%;
     }
 
+    /* CTA banner: text and button stack instead of sitting side by side */
     .action-box {
         flex-direction: column;
         align-items: flex-start;

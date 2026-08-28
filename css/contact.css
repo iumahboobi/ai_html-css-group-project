@@ -1,13 +1,27 @@
-body { /* -- To fill entire Tablet viewport -- */
+/* - - - - STICKY FOOTER LAYOUT (keeps footer pinned to bottom on short pages) - - - - */
+
+    /* body becomes a full-height flex column so the footer never floats
+    mid-page on tablets/short viewports with little content above it */
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* main grows to fill whatever space header + footer don't use,
+   pushing the footer down to the bottom of the viewport */
+main {
+    flex: 1;
+}
+
+/* - - - - HERO OVERRIDE (page-specific tweak on top of the shared hero) - - - - */
+
+/* Nudges this page's gif up slightly relative to the shared hero layout */
 .animated-gif img {
     transform: translateY(-20px);
 }
 
+/* - - - - CONTACT INTRO (friendly heading + short blurb) - - - - */
 .contact-intro {
     text-align: center;
     padding: 5% 5% 2%;
@@ -25,10 +39,12 @@ body { /* -- To fill entire Tablet viewport -- */
     color: var(--color-dark);
 }
 
+/* - - - - CONTACT FORM - - - - */
 .contact-form-section {
     padding: 2% 5% 5%;
 }
 
+/* FLEX PARENT: stacks label/input pairs vertically, centered as a column */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -52,11 +68,8 @@ body { /* -- To fill entire Tablet viewport -- */
     font-size: 16px;
 }
 
+/* Keeps the submit button its natural width instead of stretching
+   to fill the form column */
 .contact-form button {
     align-self: flex-start;
 }
-
-main {
-    flex: 1;
-}
-
