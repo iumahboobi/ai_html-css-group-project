@@ -15,6 +15,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -76,6 +81,14 @@ img {
 .site-header {
     background-color: var(--color-dark);
     padding: 20px 0;
+
+    /* ---------- NEW: STICKY NAV ---------- */
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    transition: box-shadow 0.3s ease;
 }
 
 .site-header .container {
@@ -97,7 +110,7 @@ img {
     font-size: 18px;
     padding: 6px 10px;
     border-radius: 4px;
-    transition: color 0.2s ease, background-color 0.2s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .main-nav a:hover {
@@ -135,11 +148,119 @@ img {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-.site-footer {
+
+/* ===== CALL TO ACTION BANNER SECTION ===== */
+
+
+.cta {
+    padding: 80px 0;
+}
+
+.cta-banner {
+    background-color: var(--color-blue);
+    border-radius: 8px;
+    padding: 40px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.cta-text h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 4px;
+}
+
+.cta-text p {
+
+    font-size: 16px;
+    color: rgba(249, 250, 248, 0.85);
+}
+
+/* ===== SHARED PAGE HERO + FOOTER (gallery, services, contact) ===== */
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.hero {
     background-color: var(--color-dark);
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+}
+
+.hero article {
+    max-width: 45%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: var(--color-white);
+    font-weight: 800;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 18px;
     color: var(--color-light-gray);
-    padding: 32px 0;
+    margin-bottom: 24px;
+}
+
+.animated-gif img {
+    height: clamp(60px, 20vw, 1200px);
+    width: auto;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 60px;
+    background-color: var(--color-dark);
+    margin-top: 5%;
+}
+
+.footer-brush {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    height: 50px;
+    width: auto;
+    transform: translateY(-50%);
+    z-index: 0;
+    animation: footer-brush-cross 8s linear infinite;
+}
+
+.footer p {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    color: var(--color-white);
+    font-size: small;
     text-align: center;
+}
+
+@keyframes footer-brush-cross {
+    from {
+        left: -60px;
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        left: 100%;
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 /* ===== MEDIA QUERIES */
@@ -189,6 +310,19 @@ img {
     /* CSS-only magic: when checkbox is checked, show the nav menu */
     .nav-toggle-checkbox:checked~ul {
         display: flex;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero article {
+        max-width: 90%;
     }
 }
 
