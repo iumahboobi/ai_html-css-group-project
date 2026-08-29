@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <title>Gallery | One brush paintings</title>
+    <title>Gallery | One Brush Paintings by John Van Gogh</title>
 </head>
 
 <body>
+
+    <!-- 1. STICKY HEADER (small consistent height across all pages) -->
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.webp" alt="One brush paintings by John Van Gogh website logo">   
+                <img src="images/logo.webp"
+                     alt="One Brush Paintings by John Van Gogh — hand-painted fine art logo">
             </a>
             <nav class="main-nav" aria-label="Main navigation">
-                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-                <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+                <input type="checkbox"
+                       id="nav-toggle"
+                       class="nav-toggle-checkbox">
+                <label for="nav-toggle"
+                       class="nav-toggle-label"
+                       aria-label="Toggle navigation menu">
                     <i class="fa-solid fa-bars"></i>
                 </label>
                 <ul>
@@ -31,96 +40,74 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <article>
-                <h1>Welcome to my gallery</h1>
-                <br>
-                <p class="hero-subtitle">
-                    Here you can enjoy my portraits and creations. Please
-                    feel free to explore them and dream about how you might look
-                    painted by me.
-                </p>
-
-            </article>
-            <div class="animated-gif">
-                <img src="images/gif1.gif" alt="Brush in movement">
-            </div>
+    <!-- 2. GALLERY HERO (separate section, the big cursive heading belongs HERE) -->
+    <section class="gallery-hero">
+        <div class="container gallery-hero-inner">
+            <h1 class="gallery-hero-heading">One brush<br>paintings</h1>
+            <p class="gallery-hero-byline">by John Van Gogh</p>
+            <p class="gallery-hero-tag">Fine art paintings &amp; commissions</p>
         </div>
     </section>
 
-    <h2>Explore my art.</h2>
+    <!-- 3. GALLERY PAGE MAIN CONTENT  -->
+    <main>
+        <section class="gallery-intro">
+            <div class="container">
+                <h2>Welcome to my gallery</h2>
+                <p>Here you can enjoy my portraits and creations. Please feel free to explore them and
+                   dream about how they might look painted by me.</p>
+            </div>
+        </section>
 
-    <main class="main-content">
-        <article class="card">
-            <img src="images/girl1.webp" alt="painting of a girl">
-            <p class="titles">"Fiona's look"</p>
-            <p>Oil on canvas </p>
-        </article>
-        <article class="card">
-            <img src="images/man2.webp" alt="painting of an old man">
-            <p class="titles">"Time"</p>
-            <p>Charcoal on paper</p>
-        </article>
-        <article class="card">
-            <img src="images/woman1.webp" alt="painting of an old woman">
-            <p class="titles">"Grandma's joy"</p>
-            <p>Acrylic on canvas</p>
-        </article>
-        <article class="card">
-            <img src="images/boy1.webp" alt="painting of a man">
-            <p class="titles">"Robert"</p>
-            <p>Acrylic on paper</p>
-        </article>
-        <article class="card">
-            <img src="images/woman2.webp" alt="painting of an old woman">
-            <p class="titles">"Tiredness"</p>
-            <p>Acrylic on canvas</p>
-        </article>
-        <article class="card">
-            <img src="images/girl2.webp" alt="painting of a young girl">
-            <p class="titles">"Lucy's innocence"</p>
-            <p>Oil on canvas</p>
-        </article>
-        <article class="card">
-            <img src="images/couple1.webp" alt="painting of a couple">
-            <p class="titles">"Forever"</p>
-            <p>Acrylic on canvas</p>
-        </article>
-        <article class="card">
-            <img src="images/man1.webp" alt="painting of an old man">
-            <p class="titles">"Judgement"</p>
-            <p>Oil on paper</p>
-        </article>
-        <article class="card">
-            <img src="images/boy2.webp" alt="painting of a young boy">
-            <p class="titles">"Rebel"</p>
-            <p>Acrylic on canvas</p>
-        </article>
+        <section class="gallery-grid-wrap">
+            <div class="container">
+                <div class="gallery-grid">
+
+                    <figure class="gallery-item">
+                        <img src="https://picsum.photos/seed/dvg-starrynight/500/600"
+                             alt="Impasto oil portrait of a starry night sky over a village, rendered in the Van Gogh post-impressionist style"
+                             width="500"
+                             height="600">
+                        <figcaption>Starry Village — oil on linen, 2025</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img src="https://picsum.photos/seed/dvg-sunflowers/500/600"
+                             alt="Still life oil painting of sunflowers in a rustic vase on a wooden table"
+                             width="500"
+                             height="600">
+                        <figcaption>Sunflowers — oil on linen, 2024</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img src="https://picsum.photos/seed/dvg-portrait1/500/600"
+                             alt="Contemplative oil portrait of a young woman seated near a window with northern light"
+                             width="500"
+                             height="600">
+                        <figcaption>Girl at the Window — commissioned portrait, 2025</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img src="https://picsum.photos/seed/dvg-tulips/500/600"
+                             alt="Wide landscape oil painting of dutch tulip fields in bloom at sunset"
+                             width="500"
+                             height="600">
+                        <figcaption>Tulip Fields at Golden Hour — oil on linen, 2026</figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
     </main>
 
-    <section class="quote-container">
-        <p class="quote">«I dream my painting and I paint my dream»</p>
-        <p id="author"><strong>-Vincent Van Gogh</strong></p>
-    </section>
-
-    <br>
-    <br>
-
-    <article class="action-box">
-        <div>
-            <h3>Get access to my services and get your portrait!</h3>
-            <p>Every portrait is homemade with organic materials and fully customized.</p>
+    <!-- 4. SHARED FOOTER (same class as all other pages so shared CSS applies) -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 One Brush Paintings by John Van Gogh. All original artworks &amp;
+               content protected under international copyright law.</p>
         </div>
-        <div>
-            <button class="btn btn-outline">Sign up</button>
-        </div>
-    </article>
-
-    <footer class="footer">
-        <img src="images/pincel2.webp" alt="" class="footer-brush">
-        <p>&copy; 2026 One Brush Paintings by John Van Gogh. All rights reserved.</p>
     </footer>
-    
+
 </body>
+
 </html>

@@ -80,10 +80,9 @@ img {
 
 .site-header {
     background-color: var(--color-dark);
-    padding: 20px 0;
+    padding: 12px 0;
 
-    /* ---------- NEW: STICKY NAV ---------- */
-
+    /* ---------- STICKY NAV ---------- */
     position: sticky;
     top: 0;
     z-index: 999;
@@ -92,17 +91,31 @@ img {
 }
 
 .site-header .container {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 700;
     color: var(--color-white);
+    max-width: 260px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Prevent the logo image from stretching the header to massive height
+   (logo is a fixed decorative size regardless of its native file dimensions) */
+.logo img {
+    max-height: 52px;
+    max-width: 240px;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .main-nav a {
