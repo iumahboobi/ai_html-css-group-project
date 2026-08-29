@@ -235,16 +235,20 @@ img {
     width: auto;
 }
 
-.footer {
+.site-footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    min-height: 60px;
+    min-height: 80px;
     background-color: var(--color-dark);
     margin-top: 5%;
+    padding: 24px 20px;
+    text-align: center;
 }
 
+/* Animated brush that sweeps + spins across the footer on repeat */
 .footer-brush {
     position: absolute;
     top: 50%;
@@ -253,16 +257,19 @@ img {
     width: auto;
     transform: translateY(-50%);
     z-index: 0;
+    pointer-events: none;
     animation: footer-brush-cross 8s linear infinite;
 }
 
-.footer p {
+.site-footer p {
     flex: 1;
     position: relative;
     z-index: 1;
-    color: var(--color-white);
-    font-size: small;
-    text-align: center;
+    color: var(--color-light-gray);
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 820px;
+    margin: 0 auto;
 }
 
 @keyframes footer-brush-cross {
