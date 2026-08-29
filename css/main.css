@@ -180,17 +180,87 @@ img {
     color: rgba(249, 250, 248, 0.85);
 }
 
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--color-white);
+/* ===== SHARED PAGE HERO + FOOTER (gallery, services, contact) ===== */
+
+.logo img {
+    height: 70px;
+    width: auto;
 }
 
-
-.site-footer {
+.hero {
     background-color: var(--color-dark);
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+}
+
+.hero article {
+    max-width: 45%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: var(--color-white);
+    font-weight: 800;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 18px;
     color: var(--color-light-gray);
-    padding: 32px 0;
+    margin-bottom: 24px;
+}
+
+.animated-gif img {
+    height: clamp(60px, 20vw, 1200px);
+    width: auto;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 60px;
+    background-color: var(--color-dark);
+    margin-top: 5%;
+}
+
+.footer-brush {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    height: 50px;
+    width: auto;
+    transform: translateY(-50%);
+    z-index: 0;
+    animation: footer-brush-cross 8s linear infinite;
+}
+
+.footer p {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    color: var(--color-white);
+    font-size: small;
     text-align: center;
+}
+
+@keyframes footer-brush-cross {
+    from {
+        left: -60px;
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        left: 100%;
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 /* ===== MEDIA QUERIES */
@@ -240,6 +310,19 @@ img {
     /* CSS-only magic: when checkbox is checked, show the nav menu */
     .nav-toggle-checkbox:checked~ul {
         display: flex;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero article {
+        max-width: 90%;
     }
 }
 

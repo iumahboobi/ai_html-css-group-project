@@ -1,52 +1,14 @@
-.logo img {
-    height: 70px;
-    width: auto;
-    padding: 10px;
-    margin-left: 5%;
-}
-
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5%;
-    background-color: var(--color-dark);
-}
-
-.hero article {
-    max-width: 45%;
-}
-
-.hero h1{
-    font-size: 48px;
-    line-height: 1.2;
-    color: var(--color-white);
-    font-style: bold;
-    position: relative;
-    margin-left: 10%;
-}
-
-.hero-subtitle {
-    font-size: 18px;
-    color: var(--color-light-gray);
-    margin-left: 10%;
-    margin-bottom: 10%;
-}
-
-.animated-gif {
-    margin-right: 10%;
-}
-
-.animated-gif img {
-    height: clamp(60px, 20vw, 1200px);
-    width: auto;
-}
-
+/* - - - - SECTION HEADING ("Explore my art.") - - - - */
 h2 {
     text-align: center;
     font-size: 36px;
+    font-weight: 800;
+    color: var(--color-dark);
 }
 
+/* - - - - PAINTING CARDS GRID - - - - */
+
+/* FLEX PARENT: wraps the 9 painting cards into rows */
 .main-content {
     display: flex;
     flex-wrap: wrap;
@@ -54,6 +16,7 @@ h2 {
 
 }
 
+/* FLEX CHILD: each painting card — 32% width = 3 per row on desktop */
 .card {
     flex: 0 0 32%;
     padding: 3%;
@@ -68,6 +31,7 @@ h2 {
     transition: transform 0.5s ease;
 }
 
+/* Zoom-in effect on hover */
 .card img:hover {
     transform: scale(1.1);
 }
@@ -76,9 +40,10 @@ h2 {
     text-align: center;
     margin-top: 6%;
     font-size: clamp(14px, 2vw, 20px);
-    
+
 }
 
+/* Painting title (italic, above the material caption) */
 .titles {
     text-align: center;
     margin-top: 6%;
@@ -86,15 +51,19 @@ h2 {
     font-style: italic;
 }
 
+/* Tightens the gap between the title and the material caption below it */
 .card p + p {
     margin-top: 1%;
 }
 
+/* - - - - QUOTE / TESTIMONIAL SECTION (gray band) - - - - */
 .quote-container {
-    background-color: #E5E7EB;
-    padding: 3% 0;
+    background-color: var(--color-light-gray);
+    padding: 3% 5%;
 }
 
+/* Quote and author stay a constant
+   distance apart instead of drifting apart on wide viewports */
 .quote-container p {
     max-width: 600px;
     margin-left: auto;
@@ -102,17 +71,19 @@ h2 {
 }
 
 .quote {
-    font-size: 36px;
+    font-size: clamp(20px, 5vw, 36px);
     font-weight: 300;
     font-style: italic;
     color: var(--color-dark);
 }
 
+/* Right-aligned attribution line under the quote */
 #author {
     text-align: end;
-    font-size: medium;
+    font-size: clamp(14px, 3vw, 16px);
 }
 
+/* - - - - CALL TO ACTION BANNER (blue box before footer) - - - - */
 .action-box {
     display: flex;
     justify-content: space-between;
@@ -135,15 +106,19 @@ h2 {
     font-size: 13px;
 }
 
-.footer {
-    display: flex;
-    align-items: center;
-    background-color: var(--color-dark);
-}
+/* - - - - RESPONSIVE — Mobile (max 767px, same breakpoint as the
+   header burger menu in main.css) - - - - */
+@media (max-width: 767px) {
 
-.footer p {
-    flex: 1;
-    color: var(--color-white);
-    font-size: small;
-    text-align: center;
+    /* CTA banner: text and button stack instead of sitting side by side */
+    .action-box {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 90%;
+    }
+
+    /* Painting cards: 32% -> 48% width, so 2 fit per row instead of 3 */
+    .card {
+        flex: 0 0 48%;
+    }
 }

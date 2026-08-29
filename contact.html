@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="">
-    <title>Contact | Group Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Contact | One brush paintings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -14,32 +12,66 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo"></a>
-            <nav class="main-nav"
-                 aria-label="Main navigation">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="One brush paintings by John Van Gogh website logo">
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1></h1>
-                <p></p>
+    <section class="hero">
+        <div class="container">
+            <article>
+                <h1>Get in touch</h1>
+                <br>
+                <p class="hero-subtitle">
+                    Have a piece in mind? Reach out and let's talk about
+                    bringing it to life.
+                </p>
+            </article>
+            <div class="animated-gif">
+                <img src="images/luz.gif" alt="Brush in movement">
             </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="contact-intro">
+            <h2>Let's create something together</h2>
+            <p>Have a question or an idea for a piece? Fill out the form below and I'll get back to you soon.</p>
+        </section>
+
+        <section class="contact-form-section">
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send message</button>
+            </form>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p></p>
-        </div>
+    <footer class="footer">
+        <img src="images/pincel2.webp" alt="Brush in movement" class="footer-brush">
+        <p>&copy; 2026 One Brush Paintings by John Van Gogh. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -1,5 +1,5 @@
 /* ===========================================================
-   about.css — David Van Gogh painter About page ONLY styles
+   about.css — John Van Gogh painter About page ONLY styles
    =========================================================== */
 
 /* ===== SECTION 1: ABOUT HERO (dark banner) ===== */
@@ -137,75 +137,10 @@
     color: #374151;
 }
 
-/* ===== SECTION 3: VALUES / CRAFT PRINCIPLES (light gray, 3 cards) ===== */
-.about-values {
-    background-color: var(--color-light-gray);
-    padding: 96px 0;
-}
-
-.values-heading {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-dark);
-    text-align: center;
-    margin-bottom: 56px;
-}
-
-.values-grid {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
-.value-card {
-    flex: 1 1 280px;
-    max-width: 360px;
-    background-color: var(--color-white);
-    border-radius: 12px;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(31, 41, 55, 0.15);
-}
-
-.value-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 14px;
-    background-color: rgba(56, 130, 246, 0.12);
-    color: var(--color-blue);
-    font-size: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 4px;
-}
-
-.value-card h3 {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--color-dark);
-}
-
-.value-card p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #4B5563;
-}
-
 /* ===== RESPONSIVE — About page media queries ===== */
 @media (max-width: 992px) {
     .about-hero-text h1 { font-size: 42px; }
-    .about-bio, .about-values { padding: 72px 0; }
-    .values-heading { font-size: 32px; }
+    .about-bio { padding: 72px 0; }
 }
 
 @media (max-width: 768px) {
@@ -213,14 +148,10 @@
     .about-hero-text h1 { font-size: 34px; }
     .stat strong { font-size: 26px; }
     .about-bio-text h2 { font-size: 28px; }
-    .about-bio, .about-values { padding: 56px 0; }
-    .values-heading { font-size: 26px; margin-bottom: 36px; }
-    .value-card { padding: 28px 24px; }
+    .about-bio { padding: 56px 0; }
 }
 
 @media (max-width: 576px) {
     .about-hero-wrapper, .about-bio-wrapper { gap: 36px; }
     .about-hero-stats { gap: 20px 28px; }
-    .values-grid { gap: 20px; }
-    .value-card h3 { font-size: 20px; }
 }

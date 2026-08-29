@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="">
-    <title>Services | Group Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Services | One brush paintings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/services.css">
@@ -14,32 +12,95 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="index.html" class="logo"></a>
-            <nav class="main-nav"
-                 aria-label="Main navigation">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="One brush paintings by John Van Gogh website logo">
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1></h1>
-                <p></p>
+    <section class="hero">
+        <div class="container">
+            <article>
+                <h1>Know my services</h1>
+                <br>
+                <p class="hero-subtitle">
+                    Discover the portrait services I offer and find the perfect
+                    fit for the piece you have in mind.
+                </p>
+            </article>
+            <div class="animated-gif">
+                <img src="images/pintor1.webp" alt="Brush in movement" class="pintor">
             </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="services-intro">
+            <p>At One Brush Paintings, every service is built around a single idea: capturing personality on canvas. Explore what I offer below.</p>
         </section>
+
+        <section class="services-list">
+            <article class="service">
+                <img src="images/pinta.webp" alt="Example of a custom hand-painted portrait">
+                <div class="service-text">
+                    <h3>Custom Portraits</h3>
+                    <p>A hand-painted portrait made exclusively for you, from a single reference photo to a finished canvas. Every detail, from the brushstrokes to the color palette, is carefully chosen to reflect the personality of the person or moment being portrayed. Ideal for gifts, family keepsakes, or a piece that simply deserves to be remembered forever.</p>
+                </div>
+            </article>
+
+            <article class="service service-reverse service-horizontal">
+                <img src="images/restaura.webp" alt="Example of a restored painting">
+                <div class="service-text">
+                    <h3>Art Restoration</h3>
+                    <p>Old or damaged paintings brought back to life with careful, traditional restoration techniques.</p>
+                </div>
+            </article>
+
+            <br>
+
+            <article class="service service-panoramic">
+                <img src="images/ilustra.webp" alt="Example of a custom illustration">
+                <div class="service-text">
+                    <h3>Custom Illustrations</h3>
+                    <p>Original illustrations for books, gifts, or personal projects, created entirely by hand. Whether you need a single striking image or a full set of consistent artwork, each illustration is developed from your idea through sketches and revisions until it matches exactly what you had in mind.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="services-intro">
+            <p>Every piece is made with organic materials and delivered with care, wherever you are.</p>
+        </section>
+
+        <br>
+        <br>
+
+        <article class="action-box">
+            <div>
+                <h3>Get access to my services and get your portrait!</h3>
+                <p>Every portrait is homemade with organic materials and fully customized.</p>
+            </div>
+            <div>
+                <button class="btn btn-outline">Sign up</button>
+            </div>
+        </article>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p></p>
-        </div>
+    <footer class="footer">
+        <img src="images/pincel2.webp" alt="" class="footer-brush">
+        <p>&copy; 2026 One Brush Paintings by John Van Gogh. All rights reserved.</p>
     </footer>
 </body>
 </html>
